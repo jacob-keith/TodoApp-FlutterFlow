@@ -144,6 +144,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'tasks': TasksWidget(),
       'completed': CompletedWidget(),
+      'MyAI': MyAIWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -174,6 +175,14 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.checklist_sharp,
+              size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.headset_mic,
               size: 24.0,
             ),
             label: 'Home',
